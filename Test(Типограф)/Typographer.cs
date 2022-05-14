@@ -41,7 +41,7 @@ namespace Test_Типограф_
 
         private void bhelp_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("");
+            MessageBox.Show("Данная программа предназначена для того, чтобы Вам не доставляло неудобств печатание какого-либо текста, а сам текст выглядел более аккуратным!");
         }
 
         public void Edit()
