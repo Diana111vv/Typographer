@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Test_Типограф_
 {
     static class Program
     {
-        public static Edited_text edited_Text;
         public static Typographer typographer;
+        public static Parameters parameters;
 
         /// <summary>
         /// Главная точка входа для приложения.
