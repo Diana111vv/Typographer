@@ -93,7 +93,6 @@ namespace Test_Типограф_
                 rtbText.Text = Regex.Replace(rtbText.Text, @"\s*\+", "+");
                 rtbText.Text = Regex.Replace(rtbText.Text, @"\s*\.", ".");
                 rtbText.Text = Regex.Replace(rtbText.Text, @"\s*\?", "?");
-                rtbText.Text = Regex.Replace(rtbText.Text, @"\s*±", "±");
             }
         }
         public void Plus_or_minus()
