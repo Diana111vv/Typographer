@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31624.102
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test(Типограф)", "Test(Типограф)\Test(Типограф).csproj", "{E0EDF20E-44FB-47F2-9C3F-041A00643A4A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test_Типограф_", "Test(Типограф)\Test_Типограф_.csproj", "{E0EDF20E-44FB-47F2-9C3F-041A00643A4A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test_Типограф_.Tests", "Typograher.Test\Test_Типограф_.Tests.csproj", "{0F2935FA-E43B-4900-8891-EE9B9F7525E8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{E0EDF20E-44FB-47F2-9C3F-041A00643A4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E0EDF20E-44FB-47F2-9C3F-041A00643A4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E0EDF20E-44FB-47F2-9C3F-041A00643A4A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F2935FA-E43B-4900-8891-EE9B9F7525E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F2935FA-E43B-4900-8891-EE9B9F7525E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F2935FA-E43B-4900-8891-EE9B9F7525E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F2935FA-E43B-4900-8891-EE9B9F7525E8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
