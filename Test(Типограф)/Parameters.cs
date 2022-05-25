@@ -74,13 +74,11 @@ namespace Test_Типограф_
         private void Parameters_Load(object sender, EventArgs e)
         {
             ToolTip toolTip = new ToolTip();
-            toolTip.AutoPopDelay = 5000;
-            toolTip.InitialDelay = 1000;
+            toolTip.AutoPopDelay = 8000;
+            toolTip.InitialDelay = 500;
             toolTip.ReshowDelay = 500;
-            // Force the ToolTip text to be displayed whether or not the form is active.
             toolTip.ShowAlways = true;
 
-            // Set up the ToolTip text for the Button and Checkbox.
             toolTip.SetToolTip(this.cbwhitespace, "Два пробела и более заменяются одним пробелом.");
             toolTip.SetToolTip(this.cbplus_or_minus, "Символ «+,-» заменяется на ±");
             toolTip.SetToolTip(this.cbcross_out, "Буква «з» и «в» заменяются на перечёркнутые «z» и «v» соответственно.");
