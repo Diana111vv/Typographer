@@ -42,7 +42,14 @@ namespace Test_Типограф_
         }
         private void bclear_Click(object sender, EventArgs e)
         {
-            rtbText.Clear();
+            try
+            {
+                rtbText.Clear();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Возможно вы не набрали текст!");
+            }
         }
 
 
@@ -318,7 +325,7 @@ namespace Test_Типограф_
             }
             catch (Exception)
             {
-                MessageBox.Show("Возможно вы не набрали текст или не выделили его!");
+                MessageBox.Show("Возможно вы не набрали текст!");
             }
         }
 
