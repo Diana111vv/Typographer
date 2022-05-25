@@ -50,7 +50,7 @@ namespace Test_Типограф_
             this.cbwhitespace.TabIndex = 0;
             this.cbwhitespace.Text = "Один пробел";
             this.cbwhitespace.UseVisualStyleBackColor = true;
-             // 
+            // 
             // cbquotation_marks
             // 
             this.cbquotation_marks.AutoSize = true;
@@ -135,7 +135,7 @@ namespace Test_Типограф_
             this.gbparameters.Controls.Add(this.cbwhitespace);
             this.gbparameters.Location = new System.Drawing.Point(12, 12);
             this.gbparameters.Name = "gbparameters";
-            this.gbparameters.Size = new System.Drawing.Size(301, 162);
+            this.gbparameters.Size = new System.Drawing.Size(301, 161);
             this.gbparameters.TabIndex = 9;
             this.gbparameters.TabStop = false;
             this.gbparameters.Text = "Параметры";

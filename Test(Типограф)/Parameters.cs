@@ -85,5 +85,6 @@ namespace Test_Типограф_
             toolTip.SetToolTip(this.cbquotation_marks, "Кавычки «\"» заменяются на кавычки «ёлочки». \nЕсли в одной конструкции необходимо написать другую, то вместо «ёлочек» используются кавычки „лапки“.");
             toolTip.SetToolTip(this.cbreplace_the_letter, "Буква «и» заменяется на букву «i».");
         }
+
     }
 }
