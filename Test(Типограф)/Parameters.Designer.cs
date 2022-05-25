@@ -50,7 +50,7 @@ namespace Test_Типограф_
             this.cbwhitespace.TabIndex = 0;
             this.cbwhitespace.Text = "Один пробел";
             this.cbwhitespace.UseVisualStyleBackColor = true;
-            // 
+             // 
             // cbquotation_marks
             // 
             this.cbquotation_marks.AutoSize = true;
@@ -154,6 +154,7 @@ namespace Test_Типограф_
             this.MaximizeBox = false;
             this.Name = "Parameters";
             this.Text = "Параметры";
+            this.Load += new System.EventHandler(this.Parameters_Load);
             this.gbparameters.ResumeLayout(false);
             this.gbparameters.PerformLayout();
             this.ResumeLayout(false);
