@@ -42,7 +42,14 @@ namespace Test_Типограф_
         }
         private void bclear_Click(object sender, EventArgs e)
         {
-            rtbText.Clear();
+            try
+            {
+                rtbText.Clear();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Возможно вы не набрали текст!");
+            }
         }
 
 
@@ -158,7 +165,7 @@ namespace Test_Типограф_
 
         private void bexample_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("1)  Сегодня  просто    прекрасный    вечер    ,  не   так   ли    ? - 1) Сегодня просто прекрасный вечер, не так ли?  \n\n2) Вася Пупкин сказал: \"Мой хакерский никнейм \"Neo\"! \" - 2) Вася Пупкин сказал: «Мой хакерский никнейм „Neo“» \n\n3) Нам нужно +,- 5 метров материала. - 3) Нам нужно ± 5 метров материала. \n\n4) Сегодня заяц и волк вместе позавтракали. - 4) Сегодня z̶аяц и v̶олк v̶месте поz̶аv̶тракали. \n\n5) Инвентарь искали инициативные, импульсивные инспекторы. - 5) Iнвентарь iскалi iнiцiатiвные, iмпульсiвные iнспекторы.", "Примеры");
+            MessageBox.Show("1)  Сегодня  просто    прекрасный    вечер    ,  не   так   ли    ? - 1) Сегодня просто прекрасный вечер, не так ли?  \n\n2.1) Слова Фридриха Ницше \"Без музыки жизнь была бы ошибкой\" стали популярными. - 2.1) Слова Фридриха Ницше «Без музыки жизнь была бы ошибкой» стали популярными.\n2.2) Вася Пупкин сказал: \"Мой хакерский никнейм \"Neo\"! \" - 2) Вася Пупкин сказал: «Мой хакерский никнейм „Neo“» \n\n3) Нам нужно +,- 5 метров материала. - 3) Нам нужно ± 5 метров материала. \n\n4) Сегодня заяц и волк вместе позавтракали. - 4) Сегодня z̶аяц и v̶олк v̶месте поz̶аv̶тракали. \n\n5) Инвентарь искали инициативные, импульсивные инспекторы. - 5) Iнвентарь iскалi iнiцiатiвные, iмпульсiвные iнспекторы.", "Примеры");
         }
 
         private void bparameters_Click(object sender, EventArgs e)
@@ -275,23 +282,51 @@ namespace Test_Типограф_
 
         private void tsmiCut_Click(object sender, EventArgs e)
         {
-            Clipboard.SetText(rtbText.Text.Substring(rtbText.SelectionStart, rtbText.SelectionLength));
-            rtbText.Text = rtbText.Text.Remove(rtbText.SelectionStart, rtbText.SelectionLength);
+            try
+            {
+                Clipboard.SetText(rtbText.Text.Substring(rtbText.SelectionStart, rtbText.SelectionLength));
+                rtbText.Text = rtbText.Text.Remove(rtbText.SelectionStart, rtbText.SelectionLength);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Возможно вы не набрали текст или не выделили его!");
+            }
         }
 
         private void tsmiCopy_Click(object sender, EventArgs e)
         {
-            Clipboard.SetText(rtbText.SelectedText);
+            try
+            {
+                Clipboard.SetText(rtbText.SelectedText);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Возможно вы не набрали текст или не выделили его!");
+            }
         }
 
         private void tsmiPaste_Click(object sender, EventArgs e)
         {
-            rtbText.Text = rtbText.Text.Substring(0, rtbText.SelectionStart) + Clipboard.GetText() + rtbText.Text.Substring(rtbText.SelectionStart, rtbText.Text.Length - rtbText.SelectionStart);
+            try
+            {
+                rtbText.Text = rtbText.Text.Substring(0, rtbText.SelectionStart) + Clipboard.GetText() + rtbText.Text.Substring(rtbText.SelectionStart, rtbText.Text.Length - rtbText.SelectionStart);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Возможно вы не набрали текст или не выделили его!");
+            }
         }
 
         private void tsmiClean_Click(object sender, EventArgs e)
         {
-            rtbText.Clear();
+            try
+            {
+                rtbText.Clear();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Возможно вы не набрали текст!");
+            }
         }
 
         private void tsmiSelectall_Click(object sender, EventArgs e)
