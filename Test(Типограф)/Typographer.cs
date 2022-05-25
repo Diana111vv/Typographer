@@ -75,8 +75,9 @@ namespace Test_Типограф_
             {
                 Cross_out();
             }
-            else
+            else if (cbwhitespace.Checked == false && cbreplace_the_letter.Checked == false && cbquotion_marks.Checked == false && cbplus_or_minus.Checked == false && cbcross_out.Checked == false)
             {
+                MessageBox.Show("Возможно вы не выбрали никакие парметры!");
                 rtbText.Text = rtbText.Text;
             }
         }
@@ -130,13 +131,24 @@ namespace Test_Типограф_
         }
         public void Quotation_marks()
         {
-            if (Regex.IsMatch(rtbText.Text, "\"(.+?) \"(.+?)\"\""))
+            while (Regex.IsMatch(rtbText.Text, "\"(.+?)\""))
             {
-                rtbText.Text = Regex.Replace(rtbText.Text, "\"(.+?) \"(.+?)\"\"", "«$1 „$2“»");
-            }
-            else
-            {
-                rtbText.Text = Regex.Replace(rtbText.Text, "\"(.+?)\"", "«$1»");
+                if (Regex.IsMatch(rtbText.Text, "\"(.+?) \"(.+?)\"\""))
+                {
+                    rtbText.Text = Regex.Replace(rtbText.Text, "\"(.+?) \"(.+?)\"\"", "«$1 „$2“»");
+                }
+                else if (Regex.IsMatch(rtbText.Text, "\"(.+?)\" \"(.+?) \"(.+?)\"\""))
+                {
+                    rtbText.Text = Regex.Replace(rtbText.Text, "\"(.+?)\" \"(.+?) \"(.+?)\"\"", "«$1» «$2 „$3“»");
+                }
+                else if (Regex.IsMatch(rtbText.Text, "\"(.+?) \"(.+?)\"\" \"(.+?)\""))
+                {
+                    rtbText.Text = Regex.Replace(rtbText.Text, "\"(.+?) \"(.+?)\"\" \"(.+?)\"", "«$1 „$2“» «$3»");
+                }
+                else if (Regex.IsMatch(rtbText.Text, "\"(.+?)\""))
+                {
+                    rtbText.Text = Regex.Replace(rtbText.Text, "\"(.+?)\"", "«$1»");
+                }
             }
         }
 
