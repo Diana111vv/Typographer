@@ -115,6 +115,15 @@ namespace Test_Типограф_.Tests
             Assert.AreEqual(expected, typ.rtbText.Text);
         }
         [TestMethod]
+        public void Replecement_Plus_and_Minus_with_staples_to_PlusMinus()
+        {
+            Typographer typ = new Typographer();
+            typ.rtbText.Text = "(+,-)";
+            typ.Plus_or_minus();
+            string expected = "(±)";
+            Assert.AreEqual(expected, typ.rtbText.Text);
+        }
+        [TestMethod]
         public void Replecement_з_rus_to_z_with_Strikethrough()
         {
             Typographer typ = new Typographer();
