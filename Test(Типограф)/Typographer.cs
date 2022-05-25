@@ -55,29 +55,36 @@ namespace Test_Типограф_
 
         private void bprinting_Click(object sender, EventArgs e)
         {
-            if (cbwhitespace.Checked)
+            try
             {
-                Whitespace();
+                if (cbwhitespace.Checked)
+                {
+                    Whitespace();
+                }
+                if (cbquotion_marks.Checked)
+                {
+                    Quotation_marks();
+                }
+                if (cbplus_or_minus.Checked)
+                {
+                    Plus_or_minus();
+                }
+                if (cbreplace_the_letter.Checked)
+                {
+                    Replace_the_letter();
+                }
+                if (cbcross_out.Checked)
+                {
+                    Cross_out();
+                }
+                else
+                {
+                    rtbText.Text = rtbText.Text;
+                }
             }
-            if (cbquotion_marks.Checked)
+            catch(Exception)
             {
-                Quotation_marks();
-            }
-            if (cbplus_or_minus.Checked)
-            {
-                Plus_or_minus();
-            }
-            if (cbreplace_the_letter.Checked)
-            {
-                Replace_the_letter();
-            }
-            if (cbcross_out.Checked)
-            {
-                Cross_out();
-            }
-            else
-            {
-                rtbText.Text = rtbText.Text;
+                MessageBox.Show("Возможно вы не выбрали никакие параметры");
             }
         }
 
