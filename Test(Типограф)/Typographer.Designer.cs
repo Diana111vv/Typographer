@@ -239,11 +239,11 @@ namespace Test_Типограф_
             // 
             this.tsmiEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(255)))), ((int)(((byte)(218)))));
             this.tsmiEdit.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsmiCut,
+            this.tsmiSelectall,
             this.tsmiCopy,
             this.tsmiPaste,
-            this.tsmiClean,
-            this.tsmiSelectall});
+            this.tsmiCut,
+            this.tsmiClean});
             this.tsmiEdit.Name = "tsmiEdit";
             this.tsmiEdit.Size = new System.Drawing.Size(74, 24);
             this.tsmiEdit.Text = "Правка";
@@ -252,7 +252,7 @@ namespace Test_Типограф_
             // 
             this.tsmiCut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(255)))), ((int)(((byte)(218)))));
             this.tsmiCut.Name = "tsmiCut";
-            this.tsmiCut.Size = new System.Drawing.Size(186, 26);
+            this.tsmiCut.Size = new System.Drawing.Size(224, 26);
             this.tsmiCut.Text = "Вырезать";
             this.tsmiCut.Click += new System.EventHandler(this.tsmiCut_Click);
             // 
@@ -260,7 +260,7 @@ namespace Test_Типограф_
             // 
             this.tsmiCopy.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(255)))), ((int)(((byte)(218)))));
             this.tsmiCopy.Name = "tsmiCopy";
-            this.tsmiCopy.Size = new System.Drawing.Size(186, 26);
+            this.tsmiCopy.Size = new System.Drawing.Size(224, 26);
             this.tsmiCopy.Text = "Копировать";
             this.tsmiCopy.Click += new System.EventHandler(this.tsmiCopy_Click);
             // 
@@ -268,7 +268,7 @@ namespace Test_Типограф_
             // 
             this.tsmiPaste.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(255)))), ((int)(((byte)(218)))));
             this.tsmiPaste.Name = "tsmiPaste";
-            this.tsmiPaste.Size = new System.Drawing.Size(186, 26);
+            this.tsmiPaste.Size = new System.Drawing.Size(224, 26);
             this.tsmiPaste.Text = "Вставить";
             this.tsmiPaste.Click += new System.EventHandler(this.tsmiPaste_Click);
             // 
@@ -276,7 +276,7 @@ namespace Test_Типограф_
             // 
             this.tsmiClean.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(255)))), ((int)(((byte)(218)))));
             this.tsmiClean.Name = "tsmiClean";
-            this.tsmiClean.Size = new System.Drawing.Size(186, 26);
+            this.tsmiClean.Size = new System.Drawing.Size(224, 26);
             this.tsmiClean.Text = "Очистить";
             this.tsmiClean.Click += new System.EventHandler(this.tsmiClean_Click);
             // 
@@ -284,7 +284,7 @@ namespace Test_Типограф_
             // 
             this.tsmiSelectall.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(255)))), ((int)(((byte)(218)))));
             this.tsmiSelectall.Name = "tsmiSelectall";
-            this.tsmiSelectall.Size = new System.Drawing.Size(186, 26);
+            this.tsmiSelectall.Size = new System.Drawing.Size(224, 26);
             this.tsmiSelectall.Text = "Выделить всё";
             this.tsmiSelectall.Click += new System.EventHandler(this.tsmiSelectall_Click);
             // 
