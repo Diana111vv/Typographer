@@ -200,7 +200,7 @@ namespace Test_Типограф_.Tests
             Typographer typ = new Typographer();
             typ.rtbText.Text = "\"Здорова \"хакер\"\"";
             typ.Quotation_marks();
-            string expected = "«Здорова „хакер“»";
+            string expected = "«Здорова» „хакер“";
             Assert.AreEqual(expected, typ.rtbText.Text);
         }
     }
