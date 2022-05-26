@@ -55,30 +55,31 @@ namespace Test_Типограф_
 
         private void bprinting_Click(object sender, EventArgs e)
         {
-            if (cbwhitespace.Checked)
-            {
-                Whitespace();
-            }
-            if (cbquotion_marks.Checked)
-            {
-                Quotation_marks();
-            }
-            if (cbplus_or_minus.Checked)
-            {
-                Plus_or_minus();
-            }
-            if (cbreplace_the_letter.Checked)
-            {
-                Replace_the_letter();
-            }
-            if (cbcross_out.Checked)
-            {
-                Cross_out();
-            }
-            else
-            {
-                rtbText.Text = rtbText.Text;
-            }
+                if (cbwhitespace.Checked)
+                {
+                    Whitespace();
+                }
+                if(cbquotion_marks.Checked)
+                {
+                    Quotation_marks();
+                }
+                if (cbplus_or_minus.Checked)
+                {
+                    Plus_or_minus();
+                }
+                if (cbreplace_the_letter.Checked)
+                {
+                    Replace_the_letter();
+                }
+                if (cbcross_out.Checked)
+                {
+                    Cross_out();
+                }
+                else if(cbwhitespace.Checked == false && cbreplace_the_letter.Checked ==false && cbquotion_marks.Checked == false && cbplus_or_minus.Checked == false && cbcross_out.Checked == false)
+                {
+                   MessageBox.Show("Возможно вы не выбрали никакие парметры!");
+                   rtbText.Text = rtbText.Text;
+                }
         }
 
         private void bhelp_Click(object sender, EventArgs e)
@@ -130,13 +131,24 @@ namespace Test_Типограф_
         }
         public void Quotation_marks()
         {
-            if (Regex.IsMatch(rtbText.Text, "\"(.+?) \"(.+?)\"\""))
+            while (Regex.IsMatch(rtbText.Text, "\"(.+?)\""))
             {
-                rtbText.Text = Regex.Replace(rtbText.Text, "\"(.+?) \"(.+?)\"\"", "«$1 „$2“»");
-            }
-            else
-            {
-                rtbText.Text = Regex.Replace(rtbText.Text, "\"(.+?)\"", "«$1»");
+                if (Regex.IsMatch(rtbText.Text, "\"(.+?) \"(.+?)\"\""))
+                {
+                    rtbText.Text = Regex.Replace(rtbText.Text, "\"(.+?) \"(.+?)\"\"", "«$1 „$2“»");
+                }
+                else if (Regex.IsMatch(rtbText.Text, "\"(.+?)\" \"(.+?) \"(.+?)\"\""))
+                {
+                    rtbText.Text = Regex.Replace(rtbText.Text, "\"(.+?)\" \"(.+?) \"(.+?)\"\"", "«$1» «$2 „$3“»");
+                }
+                else if (Regex.IsMatch(rtbText.Text, "\"(.+?) \"(.+?)\"\" \"(.+?)\""))
+                {
+                    rtbText.Text = Regex.Replace(rtbText.Text, "\"(.+?) \"(.+?)\"\" \"(.+?)\"", "«$1 „$2“» «$3»");
+                }
+                else if (Regex.IsMatch(rtbText.Text, "\"(.+?)\""))
+                {
+                    rtbText.Text = Regex.Replace(rtbText.Text, "\"(.+?)\"", "«$1»");
+                }
             }
         }
 
