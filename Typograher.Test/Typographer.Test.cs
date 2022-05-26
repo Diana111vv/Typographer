@@ -200,7 +200,16 @@ namespace Test_Типограф_.Tests
             Typographer typ = new Typographer();
             typ.rtbText.Text = "\"Здорова \"хакер\"\"";
             typ.Quotation_marks();
-            string expected = "«Здорова» „хакер“";
+            string expected = "«Здорова „хакер“»";
+            Assert.AreEqual(expected, typ.rtbText.Text);
+        }
+        [TestMethod]
+        public void Replecement_program_three_quotatin_mark_to_two_tree_and_paws_quotation_mark()
+        {
+            Typographer typ = new Typographer();
+            typ.rtbText.Text = "\"Здорова \"хакер\"\" сказал Миша \"программист\"";
+            typ.Quotation_marks();
+            string expected = "«Здорова „хакер“» сказал Миша «программист»";
             Assert.AreEqual(expected, typ.rtbText.Text);
         }
     }
